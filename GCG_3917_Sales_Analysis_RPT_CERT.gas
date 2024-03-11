@@ -1,0 +1,1170 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Sales_RPT..create
+gui.SS_Sales_RPT..caption("Sales Analysis Report")
+gui.SS_Sales_RPT..size(5520,8685)
+gui.SS_Sales_RPT..minx(0)
+gui.SS_Sales_RPT..miny(0)
+gui.SS_Sales_RPT..position(0,0)
+gui.SS_Sales_RPT..event(unload,ss_Sales_RPT_unload)
+gui.SS_Sales_RPT..alwaysontop(False)
+gui.SS_Sales_RPT..fontname("Arial")
+gui.SS_Sales_RPT..fontsize(8)
+gui.SS_Sales_RPT..forecolor(0)
+gui.SS_Sales_RPT..fontstyle(,,,,)
+gui.SS_Sales_RPT..BackColor(-2147483633)
+gui.SS_Sales_RPT..controlbox(True)
+gui.SS_Sales_RPT..maxbutton(False)
+gui.SS_Sales_RPT..minbutton(False)
+gui.SS_Sales_RPT..mousepointer(0)
+gui.SS_Sales_RPT..moveable(True)
+gui.SS_Sales_RPT..sizeable(False)
+gui.SS_Sales_RPT..ShowInTaskBar(True)
+gui.SS_Sales_RPT..titlebar(True)
+gui.SS_Sales_RPT.lbl_dtpStart.create(label,"Beginning Date",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Sales_RPT.lbl_dtpStart.defaultvalue("")
+gui.SS_Sales_RPT.lbl_dtpStart.controlgroup(0)
+gui.SS_Sales_RPT.dtpStart.create(datepicker)
+gui.SS_Sales_RPT.dtpStart.visible(True)
+gui.SS_Sales_RPT.dtpStart.size(1800,345)
+gui.SS_Sales_RPT.dtpStart.zorder(0)
+gui.SS_Sales_RPT.dtpStart.position(100,335)
+gui.SS_Sales_RPT.dtpStart.enabled(True)
+gui.SS_Sales_RPT.dtpStart.checkbox(False)
+gui.SS_Sales_RPT.dtpStart.defaultvalue("")
+gui.SS_Sales_RPT.dtpStart.controlgroup(0)
+gui.SS_Sales_RPT.lbl_dtpEnd.create(label,"Ending Date",True,1800,200,1,1985,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Sales_RPT.lbl_dtpEnd.defaultvalue("")
+gui.SS_Sales_RPT.lbl_dtpEnd.controlgroup(0)
+gui.SS_Sales_RPT.dtpEnd.create(datepicker)
+gui.SS_Sales_RPT.dtpEnd.visible(True)
+gui.SS_Sales_RPT.dtpEnd.size(1800,345)
+gui.SS_Sales_RPT.dtpEnd.zorder(0)
+gui.SS_Sales_RPT.dtpEnd.position(1985,335)
+gui.SS_Sales_RPT.dtpEnd.enabled(True)
+gui.SS_Sales_RPT.dtpEnd.checkbox(False)
+gui.SS_Sales_RPT.dtpEnd.defaultvalue("")
+gui.SS_Sales_RPT.dtpEnd.controlgroup(0)
+gui.SS_Sales_RPT.lbl_txtPartStart.create(label,"Part Start",True,1800,200,1,100,760,True,0,Arial,8,-2147483633,0)
+gui.SS_Sales_RPT.lbl_txtPartStart.defaultvalue("")
+gui.SS_Sales_RPT.lbl_txtPartStart.controlgroup(0)
+gui.SS_Sales_RPT.txtPartStart.create(textbox,"",True,1800,330,0,100,960,True,0,Arial,8,16777215,1)
+gui.SS_Sales_RPT.txtPartStart.defaultvalue("")
+gui.SS_Sales_RPT.txtPartStart.controlgroup(0)
+gui.SS_Sales_RPT.cmd_txtPartStart.create(button)
+gui.SS_Sales_RPT.cmd_txtPartStart.caption("^")
+gui.SS_Sales_RPT.cmd_txtPartStart.visible(True)
+gui.SS_Sales_RPT.cmd_txtPartStart.size(345,330)
+gui.SS_Sales_RPT.cmd_txtPartStart.zorder(0)
+gui.SS_Sales_RPT.cmd_txtPartStart.position(1970,960)
+gui.SS_Sales_RPT.cmd_txtPartStart.enabled(True)
+gui.SS_Sales_RPT.cmd_txtPartStart.fontname("Arial")
+gui.SS_Sales_RPT.cmd_txtPartStart.fontsize(8)
+gui.SS_Sales_RPT.cmd_txtPartStart.event(click,cmd_txtpartstart_click)
+gui.SS_Sales_RPT.cmd_txtPartStart.defaultvalue("")
+gui.SS_Sales_RPT.cmd_txtPartStart.controlgroup(0)
+gui.SS_Sales_RPT.txtPartEnd.create(textbox,"",True,1800,330,0,2455,960,True,0,Arial,8,16777215,1)
+gui.SS_Sales_RPT.txtPartEnd.defaultvalue("")
+gui.SS_Sales_RPT.txtPartEnd.controlgroup(0)
+gui.SS_Sales_RPT.cmd_txtPartEnd.create(button)
+gui.SS_Sales_RPT.cmd_txtPartEnd.caption("^")
+gui.SS_Sales_RPT.cmd_txtPartEnd.visible(True)
+gui.SS_Sales_RPT.cmd_txtPartEnd.size(345,330)
+gui.SS_Sales_RPT.cmd_txtPartEnd.zorder(0)
+gui.SS_Sales_RPT.cmd_txtPartEnd.position(4340,940)
+gui.SS_Sales_RPT.cmd_txtPartEnd.enabled(True)
+gui.SS_Sales_RPT.cmd_txtPartEnd.fontname("Arial")
+gui.SS_Sales_RPT.cmd_txtPartEnd.fontsize(8)
+gui.SS_Sales_RPT.cmd_txtPartEnd.event(click,cmd_txtpartend_click)
+gui.SS_Sales_RPT.cmd_txtPartEnd.defaultvalue("")
+gui.SS_Sales_RPT.cmd_txtPartEnd.controlgroup(0)
+gui.SS_Sales_RPT.chkAllParts.create(checkbox)
+gui.SS_Sales_RPT.chkAllParts.caption("All Parts")
+gui.SS_Sales_RPT.chkAllParts.visible(True)
+gui.SS_Sales_RPT.chkAllParts.size(1080,300)
+gui.SS_Sales_RPT.chkAllParts.zorder(0)
+gui.SS_Sales_RPT.chkAllParts.position(3625,1435)
+gui.SS_Sales_RPT.chkAllParts.enabled(True)
+gui.SS_Sales_RPT.chkAllParts.alignment(0)
+gui.SS_Sales_RPT.chkAllParts.fontname("Arial")
+gui.SS_Sales_RPT.chkAllParts.fontsize(8)
+gui.SS_Sales_RPT.chkAllParts.event(click,chkallparts_click)
+gui.SS_Sales_RPT.chkAllParts.defaultvalue("")
+gui.SS_Sales_RPT.chkAllParts.controlgroup(0)
+gui.SS_Sales_RPT.cmdAddPart.create(button)
+gui.SS_Sales_RPT.cmdAddPart.caption("Add")
+gui.SS_Sales_RPT.cmdAddPart.visible(True)
+gui.SS_Sales_RPT.cmdAddPart.size(1000,360)
+gui.SS_Sales_RPT.cmdAddPart.zorder(0)
+gui.SS_Sales_RPT.cmdAddPart.position(100,1410)
+gui.SS_Sales_RPT.cmdAddPart.enabled(True)
+gui.SS_Sales_RPT.cmdAddPart.fontname("Arial")
+gui.SS_Sales_RPT.cmdAddPart.fontsize(8)
+gui.SS_Sales_RPT.cmdAddPart.event(click,cmdaddpart_click)
+gui.SS_Sales_RPT.cmdAddPart.defaultvalue("")
+gui.SS_Sales_RPT.cmdAddPart.controlgroup(0)
+gui.SS_Sales_RPT.cmdClearPart.create(button)
+gui.SS_Sales_RPT.cmdClearPart.caption("Clear")
+gui.SS_Sales_RPT.cmdClearPart.visible(True)
+gui.SS_Sales_RPT.cmdClearPart.size(1000,360)
+gui.SS_Sales_RPT.cmdClearPart.zorder(0)
+gui.SS_Sales_RPT.cmdClearPart.position(2340,1395)
+gui.SS_Sales_RPT.cmdClearPart.enabled(True)
+gui.SS_Sales_RPT.cmdClearPart.fontname("Arial")
+gui.SS_Sales_RPT.cmdClearPart.fontsize(8)
+gui.SS_Sales_RPT.cmdClearPart.event(click,cmdclearpart_click)
+gui.SS_Sales_RPT.cmdClearPart.defaultvalue("")
+gui.SS_Sales_RPT.cmdClearPart.controlgroup(0)
+gui.SS_Sales_RPT.lbl_lvwPart.create(label,"Part Range",True,1800,200,1,100,1850,True,0,Arial,8,-2147483633,0)
+gui.SS_Sales_RPT.lbl_lvwPart.defaultvalue("")
+gui.SS_Sales_RPT.lbl_lvwPart.controlgroup(0)
+gui.SS_Sales_RPT.lvwPart.create(listview)
+gui.SS_Sales_RPT.lvwPart.view(3)
+gui.SS_Sales_RPT.lvwPart.addlistviewcolumn("Beginning Part",2450,0)
+gui.SS_Sales_RPT.lvwPart.addlistviewcolumn("Ending Part",2450,0)
+gui.SS_Sales_RPT.lvwPart.visible(True)
+gui.SS_Sales_RPT.lvwPart.size(5080,2000)
+gui.SS_Sales_RPT.lvwPart.zorder(0)
+gui.SS_Sales_RPT.lvwPart.position(100,2100)
+gui.SS_Sales_RPT.lvwPart.enabled(True)
+gui.SS_Sales_RPT.lvwPart.fontname("Arial")
+gui.SS_Sales_RPT.lvwPart.fontsize(8)
+gui.SS_Sales_RPT.lvwPart.event(itemclick,lvwpart_itemclick)
+gui.SS_Sales_RPT.lbl_txtCustStart.create(label,"Customer Start",True,1800,200,1,100,4320,True,0,Arial,8,-2147483633,0)
+gui.SS_Sales_RPT.lbl_txtCustStart.defaultvalue("")
+gui.SS_Sales_RPT.lbl_txtCustStart.controlgroup(0)
+gui.SS_Sales_RPT.txtCustStart.create(textbox,"",True,1800,330,0,100,4550,True,0,Arial,8,16777215,1)
+gui.SS_Sales_RPT.txtCustStart.defaultvalue("")
+gui.SS_Sales_RPT.txtCustStart.controlgroup(0)
+gui.SS_Sales_RPT.cmd_txtCustStart.create(button)
+gui.SS_Sales_RPT.cmd_txtCustStart.caption("^")
+gui.SS_Sales_RPT.cmd_txtCustStart.visible(True)
+gui.SS_Sales_RPT.cmd_txtCustStart.size(345,330)
+gui.SS_Sales_RPT.cmd_txtCustStart.zorder(0)
+gui.SS_Sales_RPT.cmd_txtCustStart.position(1970,4550)
+gui.SS_Sales_RPT.cmd_txtCustStart.enabled(True)
+gui.SS_Sales_RPT.cmd_txtCustStart.fontname("Arial")
+gui.SS_Sales_RPT.cmd_txtCustStart.fontsize(8)
+gui.SS_Sales_RPT.cmd_txtCustStart.event(click,cmd_txtcuststart_click)
+gui.SS_Sales_RPT.cmd_txtCustStart.defaultvalue("")
+gui.SS_Sales_RPT.cmd_txtCustStart.controlgroup(0)
+gui.SS_Sales_RPT.txtCustEnd.create(textbox,"",True,1800,330,0,2455,4560,True,0,Arial,8,16777215,1)
+gui.SS_Sales_RPT.txtCustEnd.defaultvalue("")
+gui.SS_Sales_RPT.txtCustEnd.controlgroup(0)
+gui.SS_Sales_RPT.cmd_txtCustEnd.create(button)
+gui.SS_Sales_RPT.cmd_txtCustEnd.caption("^")
+gui.SS_Sales_RPT.cmd_txtCustEnd.visible(True)
+gui.SS_Sales_RPT.cmd_txtCustEnd.size(345,330)
+gui.SS_Sales_RPT.cmd_txtCustEnd.zorder(0)
+gui.SS_Sales_RPT.cmd_txtCustEnd.position(4340,4560)
+gui.SS_Sales_RPT.cmd_txtCustEnd.enabled(True)
+gui.SS_Sales_RPT.cmd_txtCustEnd.fontname("Arial")
+gui.SS_Sales_RPT.cmd_txtCustEnd.fontsize(8)
+gui.SS_Sales_RPT.cmd_txtCustEnd.event(click,cmd_txtcustend_click)
+gui.SS_Sales_RPT.cmd_txtCustEnd.defaultvalue("")
+gui.SS_Sales_RPT.cmd_txtCustEnd.controlgroup(0)
+gui.SS_Sales_RPT.chkAllCust.create(checkbox)
+gui.SS_Sales_RPT.chkAllCust.caption("All Customers")
+gui.SS_Sales_RPT.chkAllCust.visible(True)
+gui.SS_Sales_RPT.chkAllCust.size(1455,300)
+gui.SS_Sales_RPT.chkAllCust.zorder(0)
+gui.SS_Sales_RPT.chkAllCust.position(3625,5175)
+gui.SS_Sales_RPT.chkAllCust.enabled(True)
+gui.SS_Sales_RPT.chkAllCust.alignment(0)
+gui.SS_Sales_RPT.chkAllCust.fontname("Arial")
+gui.SS_Sales_RPT.chkAllCust.fontsize(8)
+gui.SS_Sales_RPT.chkAllCust.event(click,chkallcust_click)
+gui.SS_Sales_RPT.chkAllCust.defaultvalue("")
+gui.SS_Sales_RPT.chkAllCust.controlgroup(0)
+gui.SS_Sales_RPT.cmdAddCust.create(button)
+gui.SS_Sales_RPT.cmdAddCust.caption("Add")
+gui.SS_Sales_RPT.cmdAddCust.visible(True)
+gui.SS_Sales_RPT.cmdAddCust.size(1000,360)
+gui.SS_Sales_RPT.cmdAddCust.zorder(0)
+gui.SS_Sales_RPT.cmdAddCust.position(100,5135)
+gui.SS_Sales_RPT.cmdAddCust.enabled(True)
+gui.SS_Sales_RPT.cmdAddCust.fontname("Arial")
+gui.SS_Sales_RPT.cmdAddCust.fontsize(8)
+gui.SS_Sales_RPT.cmdAddCust.event(click,cmdaddcust_click)
+gui.SS_Sales_RPT.cmdAddCust.defaultvalue("")
+gui.SS_Sales_RPT.cmdAddCust.controlgroup(0)
+gui.SS_Sales_RPT.cmdClearCust.create(button)
+gui.SS_Sales_RPT.cmdClearCust.caption("Clear")
+gui.SS_Sales_RPT.cmdClearCust.visible(True)
+gui.SS_Sales_RPT.cmdClearCust.size(1000,360)
+gui.SS_Sales_RPT.cmdClearCust.zorder(0)
+gui.SS_Sales_RPT.cmdClearCust.position(2340,5135)
+gui.SS_Sales_RPT.cmdClearCust.enabled(True)
+gui.SS_Sales_RPT.cmdClearCust.fontname("Arial")
+gui.SS_Sales_RPT.cmdClearCust.fontsize(8)
+gui.SS_Sales_RPT.cmdClearCust.event(click,cmdclearcust_click)
+gui.SS_Sales_RPT.cmdClearCust.defaultvalue("")
+gui.SS_Sales_RPT.cmdClearCust.controlgroup(0)
+gui.SS_Sales_RPT.lvwCustomers.create(listview)
+gui.SS_Sales_RPT.lvwCustomers.view(3)
+gui.SS_Sales_RPT.lvwCustomers.addlistviewcolumn("Beginning Customer",2450,0)
+gui.SS_Sales_RPT.lvwCustomers.addlistviewcolumn("Ending Customer",2450,0)
+gui.SS_Sales_RPT.lvwCustomers.visible(True)
+gui.SS_Sales_RPT.lvwCustomers.size(5080,2000)
+gui.SS_Sales_RPT.lvwCustomers.zorder(0)
+gui.SS_Sales_RPT.lvwCustomers.position(100,5665)
+gui.SS_Sales_RPT.lvwCustomers.enabled(True)
+gui.SS_Sales_RPT.lvwCustomers.fontname("Arial")
+gui.SS_Sales_RPT.lvwCustomers.fontsize(8)
+gui.SS_Sales_RPT.lvwCustomers.event(itemclick,lvwcustomers_itemclick)
+gui.SS_Sales_RPT.cmdPrint.create(button)
+gui.SS_Sales_RPT.cmdPrint.caption("Print")
+gui.SS_Sales_RPT.cmdPrint.visible(True)
+gui.SS_Sales_RPT.cmdPrint.size(1000,360)
+gui.SS_Sales_RPT.cmdPrint.zorder(0)
+gui.SS_Sales_RPT.cmdPrint.position(100,7740)
+gui.SS_Sales_RPT.cmdPrint.enabled(True)
+gui.SS_Sales_RPT.cmdPrint.fontname("Arial")
+gui.SS_Sales_RPT.cmdPrint.fontsize(8)
+gui.SS_Sales_RPT.cmdPrint.event(click,cmdprint_click)
+gui.SS_Sales_RPT.cmdPrint.defaultvalue("")
+gui.SS_Sales_RPT.cmdPrint.controlgroup(0)
+gui.SS_Sales_RPT.lbl6.create(label,"Part End",True,1935,255,1,2455,760,True,0,Arial,8,-2147483633,0)
+gui.SS_Sales_RPT.lbl6.defaultvalue("")
+gui.SS_Sales_RPT.lbl6.controlgroup(0)
+gui.SS_Sales_RPT.cmdPartRemove.create(button)
+gui.SS_Sales_RPT.cmdPartRemove.caption("Remove")
+gui.SS_Sales_RPT.cmdPartRemove.visible(True)
+gui.SS_Sales_RPT.cmdPartRemove.size(1000,360)
+gui.SS_Sales_RPT.cmdPartRemove.zorder(0)
+gui.SS_Sales_RPT.cmdPartRemove.position(1200,1400)
+gui.SS_Sales_RPT.cmdPartRemove.enabled(True)
+gui.SS_Sales_RPT.cmdPartRemove.fontname("Arial")
+gui.SS_Sales_RPT.cmdPartRemove.fontsize(8)
+gui.SS_Sales_RPT.cmdPartRemove.event(click,cmdpartremove_click)
+gui.SS_Sales_RPT.cmdPartRemove.defaultvalue("")
+gui.SS_Sales_RPT.cmdPartRemove.controlgroup(0)
+gui.SS_Sales_RPT.cmdCustRemove.create(button)
+gui.SS_Sales_RPT.cmdCustRemove.caption("Remove")
+gui.SS_Sales_RPT.cmdCustRemove.visible(True)
+gui.SS_Sales_RPT.cmdCustRemove.size(1000,360)
+gui.SS_Sales_RPT.cmdCustRemove.zorder(0)
+gui.SS_Sales_RPT.cmdCustRemove.position(1200,5135)
+gui.SS_Sales_RPT.cmdCustRemove.enabled(True)
+gui.SS_Sales_RPT.cmdCustRemove.fontname("Arial")
+gui.SS_Sales_RPT.cmdCustRemove.fontsize(8)
+gui.SS_Sales_RPT.cmdCustRemove.event(click,cmdcustremove_click)
+gui.SS_Sales_RPT.cmdCustRemove.defaultvalue("")
+gui.SS_Sales_RPT.cmdCustRemove.controlgroup(0)
+gui.SS_Sales_RPT.lbl7.create(label,"Customer End",True,1800,200,1,2500,4300,True,0,Arial,8,-2147483633,0)
+gui.SS_Sales_RPT.lbl7.defaultvalue("")
+gui.SS_Sales_RPT.lbl7.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.sKey.Declare(String)
+Variable.Global.iKeyCust.Declare(Long,0)
+Variable.Global.iKeyPart.Declare(Long,0)
+Variable.UDT.uParts.Define("Dollars",Float)
+Variable.UDT.uParts.Define("GP%",Float)
+Variable.UDT.uParts.Define("Profit",Float)
+Variable.UDT.uParts.Define("Customer",String,Customer)
+Variable.UDT.uParts.Define("Cust_Name",String,Name_Cust_Ship)
+Variable.UDT.uParts.Define("Part",String,Part)
+Variable.UDT.uParts.Define("UM",String,UM_Inventory)
+Variable.UDT.uParts.Define("Part_Desc",String,Description)
+Variable.UDT.uParts.Define("Cost",Float,Cost)
+Variable.UDT.uParts.Define("Price_Discount",Float,Price_Discount)
+Variable.UDT.uParts.Define("Run_ID",Long)
+Variable.UDT.uParts.Define("Print_Date",Date)
+Variable.UDT.uParts.Define("Qty_Shipped",Float,Qty_Shipped)
+Variable.UDT.uParts.Define("Date_Invoice",String,Date_Invoice)
+Variable.uGlobal.uParts.Declare("uParts")
+Variable.UDT.uPrevYr.Define("Dollars",Float)
+Variable.UDT.uPrevYr.Define("GP%",Float)
+Variable.UDT.uPrevYr.Define("Profit",Float)
+Variable.UDT.uPrevYr.Define("Customer",String,Customer)
+Variable.UDT.uPrevYr.Define("Cust_Name",String,Name_Cust_Ship)
+Variable.UDT.uPrevYr.Define("Part",String,Part)
+Variable.UDT.uPrevYr.Define("UM",String,UM_Inventory)
+Variable.UDT.uPrevYr.Define("Part_Desc",String,Description)
+Variable.UDT.uPrevYr.Define("Cost",Float,Cost)
+Variable.UDT.uPrevYr.Define("Price_Discount",Float,Price_Discount)
+Variable.UDT.uPrevYr.Define("Run_ID",Long)
+Variable.UDT.uPrevYr.Define("Print_Date",Date)
+Variable.UDT.uPrevYr.Define("Qty_Shipped",Float,Qty_Shipped)
+Variable.UDT.uPrevYr.Define("Date_Invoice",String,Date_Invoice)
+Variable.uGlobal.uPrevYr.Declare("uPrevYr")
+Variable.Global.iUB.Declare(Long,0)
+
+
+Variable.Global.iWidths.Declare(Long)
+Variable.Global.sTitles.Declare(String)
+Variable.Global.sRet.Declare(String)
+Variable.Global.sStart.Declare(String)
+Variable.Global.sEnd.Declare(String)
+Variable.Global.sUDT.Declare(String)
+Variable.Global.iBIRunID.Declare(Long,0)
+Variable.Global.iLogID.Declare(Long,0)
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'this GAB Script will be used in conjunction of running a new custom report
+'GAB will be used for a front end screen and to pull data to a print file
+'Crystal will be used to display report.
+V.Local.bExists.Declare(Boolean)
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'first make sure that the table is found
+F.ODBC.Connection!conx.TableExists("GCG_3917_Z_SALE_RPT",V.Local.bExists)
+
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	'table was not found, end program and dont let them continue
+	F.Intrinsic.UI.Msgbox("GCG_3917_Z_SALE_RPT table not found.","Table Missing")
+	F.ODBC.Connection!conx.Close
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+F.Intrinsic.Control.Else
+	Gui.SS_Sales_RPT..Show
+F.Intrinsic.Control.EndIf
+
+'set some global variables
+F.Intrinsic.String.Split("uParts*!*uPrevYr","*!*",V.Global.sUDT)
+F.Intrinsic.String.Split("3000*!*3500","*!*",V.Global.iWidths)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.Populate.Start
+F.Intrinsic.Control.SetErrorHandler("Populate_Err")
+F.Intrinsic.Control.ClearErrors
+
+
+'here is where we will populate the tables based on the data
+V.Local.sError.Declare(String)
+V.Local.sPartRange.Declare(String)
+V.Local.sCustomerRange.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iCount.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.dCurrentStartDate.Declare(Date)
+V.Local.dCurrentEndDate.Declare(Date)
+V.Local.dPrevStartDate.Declare(Date)
+V.Local.dPrevEndDate.Declare(Date)
+V.Local.sRowPart.Declare(String)
+V.Local.sRowCust.Declare(String)
+V.Local.iDollars.Declare(Float)
+V.Local.iCost.Declare(Float)
+V.Local.iProfit.Declare(Float)
+V.Local.iGP.Declare(Float)
+V.Local.iUDT.Declare(Long)
+
+V.Local.dCurrentStartDate.Set(V.screen.SS_Sales_RPT!dtpStart.Value)
+V.Local.dCurrentEndDate.Set(V.Screen.SS_Sales_RPT!dtpEnd.Value)
+
+'always redim at the start of program to -1
+V.uGlobal.uParts.Redim(-1,-1)
+V.uGlobal.uPrevYr.Redim(-1,-1)
+
+'F.Intrinsic.Control.If(V.uGlobal.uParts.UBound,=,-1)
+	'V.uGlobal.uParts.Redim(0,0)
+'	V.uGlobal.uPrevYr.Redim(0,0)
+'F.Intrinsic.Control.EndIf
+
+
+'subtracts a year from the current date
+F.Intrinsic.Date.DateAdd("YYYY",-1,V.Local.dCurrentstartdate,V.Local.dPrevStartDate)
+F.Intrinsic.Date.DateAdd("YYYY",-1,V.Local.dCurrentEndDate,V.Local.dPrevEndDate)
+
+'here we need to loop thru our part ranges entered if any exist
+V.Local.sPartRange.Set(V.Args.Parts)
+V.Local.sCustomerRange.Set(V.Args.Customers)
+
+F.Intrinsic.String.Split(V.Local.sPartRange,"$@$",V.Local.sRowPart)
+F.Intrinsic.String.Split(V.Local.sCustomerRange,"$@$",V.Local.sRowCust)
+
+'go thru each range of parts
+F.Intrinsic.Control.DoUntil(V.Local.iC,>,V.Local.sRowPart.UBound)
+	F.Intrinsic.String.Split(V.Local.sRowPart(v.Local.iC),"*!*",V.Local.sPartRange)
+	'go thru each range of customer for each range of parts
+	V.Local.iCount.Set(0)
+	F.Intrinsic.Control.DoUntil(V.Local.iCount,>,V.Local.sRowCust.UBound)
+		F.Intrinsic.String.Split(V.Local.srowcust(v.Local.iCount),"*!*",V.Local.sCustomerRange)
+		'Now here comes the query
+		F.Intrinsic.String.Build("Select Date_Invoice,Customer, Name_Cust_Ship, Part, Description, UM_Inventory, Qty_Shipped, Price_Discount, Cost From V_Order_Hist_Line Where  Date_Invoice Between '{0}' AND '{1}'",V.Local.dCurrentStartDate.PervasiveDate,V.Local.dCurrentEndDate.PervasiveDate,V.local.sSQL)
+		F.Intrinsic.String.Build("{0} AND Part Between '{1}' AND '{2}' AND Customer Between '{3}' And '{4}'",V.Local.sSQL,V.Local.sPartRange(1),V.local.sPartRange(2),V.Local.sCustomerRange(1),V.Local.sCustomerRange(2),V.Local.sSQL)
+		F.Intrinsic.String.Build("{0} AND Part <> 'FREIGHT'  Order By Date_Invoice,Part, Customer",V.Local.sSQL,V.Local.sSQL)
+		'open recordset
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+		'load UDT from Recordset
+		F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","V.uGlobal.uParts",True)
+		F.ODBC.conx!rst.Close
+		V.Local.sSQL.Set("")
+		F.Intrinsic.String.Build("Select Date_Invoice,Customer, Name_Cust_Ship, Part, Description, UM_Inventory, Qty_Shipped, Price_Discount, Cost From V_Order_Hist_Line Where  Date_Invoice Between '{0}' AND '{1}'",V.Local.dPrevStartDate.PervasiveDate,V.Local.dPrevEndDate.PervasiveDate,V.local.sSQL)
+		F.Intrinsic.String.Build("{0} AND Part Between '{1}' AND '{2}' AND Customer Between '{3}' AND '{4}'",V.Local.sSQL,V.Local.sPartRange(1),V.local.sPartRange(2),V.Local.sCustomerRange(1),V.Local.sCustomerRange(2),V.Local.sSQL)
+		F.Intrinsic.String.Build("{0} AND Part <> 'FREIGHT' Order By Date_Invoice,Part,Customer",V.Local.sSQL,V.Local.sSQL)
+		F.ODBC.connection!conx.OpenLocalRecordsetRO("rstPrev",V.Local.sSQL)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstPrev","V.uGlobal.uPrevYr",True)
+		F.ODBC.conx!rstPrev.Close
+		F.Intrinsic.Math.Add(V.Local.iCount,1,V.Local.iCount)
+		F.Intrinsic.Control.CallSub(Processdata)
+	F.Intrinsic.Control.loop
+	F.Intrinsic.Math.Add(V.Local.iC,1,V.Local.iC)
+F.Intrinsic.Control.Loop
+
+F.Intrinsic.Control.CallSub(Udt2table)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Populate_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Populate.End
+
+program.sub.ss_Sales_RPT_unload.start
+F.Intrinsic.Control.SetErrorHandler("ss_Sales_RPT_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'close the connection and form
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_Sales_RPT_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.ss_Sales_RPT_unload.end
+
+program.sub.cmd_txtpartstart_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtpartstart_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.String.Split("Part Number*!*Description","*!*",V.Global.sTitles)
+F.Intrinsic.UI.Browser("Part Browser","conx","Select Part, Description From V_Inventory_Mstr Order By Part",V.Global.sTitles,V.Global.iWidths,5000,8000,V.Global.sRet)
+
+F.Intrinsic.Control.If(V.Global.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Global.sRet,"*!*",V.Global.sRet)
+	Gui.SS_Sales_RPT.txtPartStart.Text(V.Global.sRet(0))
+	Gui.SS_Sales_RPT.txtPartEnd.Text(V.Global.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtpartstart_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtpartstart_click.end
+
+program.sub.cmd_txtpartend_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtpartend_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.String.Split("Part Number*!*Description","*!*",V.Global.sTitles)
+F.Intrinsic.UI.Browser("Part Browser","conx","Select Part, Description From V_Inventory_Mstr Order By Part",V.Global.sTitles,V.Global.iWidths,5000,8000,V.Global.sRet)
+
+F.Intrinsic.Control.If(V.Global.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Global.sRet,"*!*",V.Global.sRet)
+	Gui.SS_Sales_RPT.txtPartEnd.Text(V.Global.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtpartend_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtpartend_click.end
+
+program.sub.cmdaddpart_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdaddpart_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'this will add the selected range into the list view with its contents
+V.Global.sStart.Set(V.Screen.SS_Sales_RPT!txtPartStart.Text)
+V.Global.sEnd.Set(V.Screen.SS_Sales_RPT!txtPartEnd.Text)
+
+'if start or end are empty notify
+F.Intrinsic.Control.If(V.Global.sStart.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please choose a beginning part number.","No Part Entered")
+	F.Intrinsic.Control.Exitsub
+F.Intrinsic.Control.elseif(V.Global.sEnd.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please choose an ending part number","No Part Entered")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'if start and end are not empty add to lvw, first col is hidden key, 2 and 3 are start and end, then clear txt
+F.Intrinsic.Math.Add(V.Global.iKeyPart,1,V.Global.iKeyPart)
+'Gui.SS_Sales_RPT.lvwPart.AddListItem(V.Global.iKeyPart,V.Global.iKeyPart)
+Gui.SS_Sales_RPT.lvwPart.AddListItem(V.Global.iKeyPart,V.Global.sStart)
+Gui.SS_Sales_RPT.lvwPart.SetListItemSubItemText(V.Global.iKeyPart,1,V.Global.sEnd)
+'Gui.SS_Sales_RPT.lvwPart.SetListItemSubItemText(V.Global.iKeyPart,1,V.Global.sStart)
+'Gui.SS_Sales_RPT.lvwPart.SetListItemSubItemText(V.Global.iKeyPart,2,V.Global.sEnd)
+Gui.SS_Sales_RPT.txtpartstart.Text("")
+Gui.SS_Sales_RPT.txtPartEnd.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddpart_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdaddpart_click.end
+
+program.sub.cmdclearpart_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdclearpart_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'clear out the text box and list view items
+Gui.SS_Sales_RPT.lvwPart.ClearItems
+V.Global.iKeyPart.Set(0)
+Gui.SS_Sales_RPT.txtPartStart.Text("")
+Gui.SS_Sales_RPT.txtPartEnd.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdclearpart_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdclearpart_click.end
+
+program.sub.cmd_txtcuststart_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtcuststart_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'customer browser for customer start
+F.Intrinsic.String.Split("Customer*!*Customer Name","*!*",V.Global.sTitles)
+F.Intrinsic.UI.Browser("Customer Browser","conx","Select Customer, Name_Customer From V_Customer_Master Order By Customer",V.Global.sTitles,V.Global.iWidths,5000,8000,V.Global.sRet)
+
+F.Intrinsic.Control.If(V.Global.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Global.sRet,"*!*",V.Global.sRet)
+	Gui.SS_Sales_RPT.txtCustStart.Text(V.Global.sRet(0))
+	Gui.SS_Sales_RPT.txtCustEnd.Text(V.Global.sRet(0))
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtcuststart_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtcuststart_click.end
+
+program.sub.cmd_txtcustend_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtcustend_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'customer browser for customer end
+F.Intrinsic.String.Split("Customer*!*Customer Name","*!*",V.Global.sTitles)
+F.Intrinsic.UI.Browser("Customer Browser","conx","Select Customer, Name_Customer From V_Customer_Master Order By Customer",V.Global.sTitles,V.Global.iWidths,5000,8000,V.Global.sRet)
+
+F.Intrinsic.Control.If(V.Global.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Global.sRet,"*!*",V.Global.sRet)
+	Gui.SS_Sales_RPT.txtCustEnd.Text(V.Global.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtcustend_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtcustend_click.end
+
+program.sub.cmdaddcust_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdaddcust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'add selected customer range into customer range listview box
+V.Global.sStart.Set(V.Screen.SS_Sales_RPT!txtCustStart.Text)
+V.Global.sEnd.Set(V.Screen.SS_Sales_RPT!txtCustEnd.Text)
+
+'if cust start or end are blank notify
+F.Intrinsic.Control.If(V.Global.sStart.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please choose a Beginning Customer")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Elseif(V.Global.sEnd.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please choose an Ending Cusomer")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'if cust start and end are not blank add to lvw, first col is hidden with key,2 and 3 are cust start and end then clear txt
+F.Intrinsic.Math.Add(V.Global.iKeyCust,1,V.Global.iKeyCust)
+'Gui.SS_Sales_RPT.lvwCustomers.AddListItem(V.global.iKeyCust,V.Global.iKeyCust)
+'Gui.SS_Sales_RPT.lvwCustomers.SetListItemSubItemText(V.Global.iKeyCust,1,V.Global.sStart)
+'Gui.SS_Sales_RPT.lvwCustomers.SetListItemSubItemText(V.Global.iKeyCust,2,V.Global.sEnd)
+Gui.SS_Sales_RPT.lvwCustomers.AddListItem(V.Global.iKeyCust,V.Global.sStart)
+Gui.SS_Sales_RPT.lvwCustomers.SetListItemSubItemText(V.Global.iKeyCust,1,V.Global.sEnd)
+Gui.SS_Sales_RPT.txtCustEnd.Text("")
+Gui.SS_Sales_RPT.txtCustStart.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddcust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdaddcust_click.end
+
+program.sub.cmdclearcust_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdclearcust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'clear out entire contents of list view for the customer
+Gui.SS_Sales_RPT.lvwCustomers.ClearItems
+V.Global.iKeyCust.Set(0)
+Gui.SS_Sales_RPT.txtCustEnd.Text("")
+Gui.SS_Sales_RPT.txtCustStart.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdclearcust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdclearcust_click.end
+
+program.sub.cmdprint_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdprint_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+
+'this information will pull in the parameters and then make this stuff happen.
+'first we need to check to make sure the date range entered is less than 365 days
+V.Local.iNumDays.Declare(Long)
+V.Local.sPartRange.Declare(String)
+V.Local.sCustRange.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sError.Declare(String)
+
+'need to get current date range entered
+'and also then get the date from year prior
+'first we need to check to make sure the date range entered is less than 365 days
+F.Intrinsic.Date.DateDiff("D",V.Screen.SS_Sales_RPT!dtpStart.Value,V.Screen.SS_Sales_RPT!dtpEnd.Value,V.Local.iNumDays)
+'F.Intrinsic.UI.Msgbox(V.Local.iNumDays)
+F.Intrinsic.Control.If(V.Local.iNumDays,>,365)
+	F.Intrinsic.UI.Msgbox("Date range cannot be greater than 365 days.","Date Range")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.ElseIf(V.Screen.SS_Sales_RPT!dtpStart.Value,>,V.Screen.SS_Sales_RPT!dtpEnd.Value)
+	F.Intrinsic.UI.Msgbox("Beginning date cannot be after the End date.","Date Range")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.UI.Msgbox(V.Local.dPrevEndDate,V.Local.dPrevStartdate)
+F.Intrinsic.Control.If(V.Screen.SS_Sales_RPT!chkAllParts.Value,=,1)
+F.Intrinsic.Control.AndIf(V.Screen.SS_Sales_RPT!chkAllCust.Value,=,1)
+	'meaning the have chosen all parts and all customers options
+	'so just search for everything
+	'query the first and last customers and parts, then put them into the part and customer ranges delimited by a *!*.
+	F.ODBC.connection!conx.OpenLocalRecordsetRO("rst","Select Top 1 Part From V_Inventory_Mstr Where Part <> '' Order By Part")
+	V.Local.sPartRange.Set(V.ODBC.conx!rst.FieldValTrim!Part)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst1","Select Top 1 Part From V_Inventory_Mstr Where Part <> '' Order By Part Desc")
+	'F.Intrinsic.String.Concat("1*!*",V.Local.sPartRange,"*!*",V.ODBC.conx!rst1.FieldValTrim!Part,V.Local.sPartRange)
+	F.Intrinsic.String.Build("1*!*{0}*!*{1}",V.Local.sPartRange,V.ODBC.conx!rst1.FieldValTrim!Part,V.Local.sPartRange)
+	F.ODBC.conx!rst.Close
+	F.ODBC.conx!rst1.Close
+	'now we do the customer
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select Top 1 Customer From V_Customer_Master Order By Customer")
+	V.Local.sCustRange.Set(V.ODBC.conx!rst.FieldValTrim!Customer)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst1","Select Top 1 Customer From V_Customer_Master Order BY Customer Desc")
+	'F.Intrinsic.String.Concat("1*!*",V.Local.sCustRange,"*!*",V.ODBC.conx!rst1.FieldValTrim!Customer,V.Local.sCustRange)
+	F.Intrinsic.String.Build("1*!*{0}*!*{1}",V.Local.sCustRange,V.ODBC.conx!rst1.FieldValTrim!Customer,V.Local.sCustRange)
+	F.ODBC.conx!rst.Close
+	F.ODBC.conx!rst1.Close
+F.Intrinsic.Control.ElseIf(V.Screen.SS_Sales_RPT!chkAllParts.Value,=,1)
+F.Intrinsic.Control.AndIf(V.Screen.SS_Sales_RPT!chkAllCust.Value,=,0)
+	'meaning they have all parts checked and not all customers checked so that would cause us to read the list view contents of the form customers
+	V.Local.sCustRange.Set(V.Screen.SS_Sales_RPT!lvwCustomers.ListViewContents)
+	F.ODBC.connection!conx.OpenLocalRecordsetRO("rst","Select Top 1 Part From V_Inventory_Mstr Where Part <> '' Order By Part")
+	V.Local.sPartRange.Set(V.ODBC.conx!rst.FieldValTrim!Part)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst1","Select Top 1 Part From V_Inventory_Mstr Where Part <> '' Order By Part Desc")
+	'F.Intrinsic.String.Concat("1*!*",V.Local.sPartRange,"*!*",V.ODBC.conx!rst1.FieldValTrim!Part,V.Local.sPartRange)
+	F.Intrinsic.String.Build("1*!*{0}*!*{1}",V.Local.sPartRange,V.ODBC.conx!rst1.FieldValTrim!Part,V.Local.sPartRange)
+	F.ODBC.conx!rst.Close
+	F.ODBC.conx!rst1.Close
+F.Intrinsic.Control.ElseIf(V.Screen.SS_Sales_RPT!chkAllParts.Value,=,0)
+F.Intrinsic.Control.AndIf(V.Screen.SS_Sales_RPT!chkAllCust.Value,=,1)
+	'meaning they have all customers checked but not all parts checked so we need to get teh list box contents of the parts
+	V.Local.sPartRange.Set(V.Screen.SS_Sales_RPT!lvwPart.ListViewContents)
+	'now we do the customer
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","Select Top 1 Customer From V_Customer_Master Order By Customer")
+	V.Local.sCustRange.Set(V.ODBC.conx!rst.FieldValTrim!Customer)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst1","Select Top 1 Customer From V_Customer_Master Order BY Customer Desc")
+	'F.Intrinsic.String.Concat("1*!*",V.Local.sCustRange,"*!*",V.ODBC.conx!rst1.FieldValTrim!Customer,V.Local.sCustRange)
+	F.Intrinsic.String.Build("1*!*{0}*!*{1}",V.Local.sCustRange,V.ODBC.conx!rst1.FieldValTrim!Customer,V.Local.sCustRange)
+	F.ODBC.conx!rst.Close
+	F.ODBC.conx!rst1.Close
+F.Intrinsic.Control.Else
+	'this should mean that no options of all have been checked
+	V.local.spartrange.Set(V.Screen.SS_Sales_RPT!lvwPart.ListViewContents)
+	V.Local.sCustRange.Set(V.Screen.SS_Sales_RPT!lvwCustomers.ListViewContents)
+F.Intrinsic.Control.EndIf
+
+'check to make sure that values have been passed to both part range and cust range
+F.Intrinsic.Control.If(V.Local.sPartRange.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please Add a selection range or choose All Parts for Part values..","No Part Selected")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.ElseIf(V.Local.sCustRange.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please add a selection range or choose All Customers for Customer values..","No Customer Selected")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+Gui.SS_Sales_RPT..Visible(False)
+F.Intrinsic.UI.InvokeWaitDialog("Processing...","Sales Analysis")
+'call the print sub passing the variables to sub
+F.Intrinsic.Control.CallSub(Populate,"Parts",V.Local.sPartRange,"Customers",V.Local.sCustRange)
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprint_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdprint_click.end
+
+program.sub.lvwpart_itemclick.start
+F.Intrinsic.Control.SetErrorHandler("lvwpart_itemclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'set sKey to selected key in lvw part
+V.Global.sKey.Set(V.Args.itemkey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("lvwpart_itemclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.lvwpart_itemclick.end
+
+program.sub.lvwcustomers_itemclick.start
+F.Intrinsic.Control.SetErrorHandler("lvwcustomers_itemclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'set the skey when they have clicked on a cell lvw customer
+V.Global.sKey.Set(V.Args.itemkey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("lvwcustomers_itemclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.lvwcustomers_itemclick.end
+
+Program.Sub.UDT2Table.Start
+F.Intrinsic.Control.SetErrorHandler("UDT2Table_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.itotalUDT.Declare(Long)
+V.Local.sError.Declare(String)
+V.Local.iR.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.sTemp.Declare(String)
+V.Local.iPer.Declare(Long)
+V.Local.dDate.Declare(Date)
+
+V.Local.dDate.Set(V.Ambient.Date)
+'start logging
+F.Global.BI.GetRunID(V.Global.iBIRunID)
+'F.Global.BI.GetIDFromName("GCG_sales_Analysis_RPT_CERT.gas",V.Local.sRptname)
+'F.Intrinsic.Control.If(V.Ambient.IsInIDE,=,True)
+ '       F.Global.BI.StartLogging(V.global.iBIRunID,V.Local.sRptname,0,"",V.global.iLogID)
+'F.Intrinsic.Control.Else
+        F.Global.BI.StartLogging(V.global.iBIRunID,-1,-1,"",V.global.iLogID)
+'F.Intrinsic.Control.EndIf
+
+'if there is nothing in the udt tell them and show the form again
+F.Intrinsic.Control.If(V.uGlobal.uParts.UBound,<,0)
+	F.Intrinsic.UI.Msgbox("No records found for selected criteria.","No Records Found")
+	F.Intrinsic.UI.CloseWaitDialog
+	Gui.SS_Sales_RPT..Visible(True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'add a counter
+F.Intrinsic.Math.Add(V.uGlobal.uParts.UBound,V.uGlobal.uPrevYr.UBound,V.Local.itotalUDT)
+V.Local.iPer.Set(0)
+
+'open recordset for writing
+F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst","Select * From GCG_3917_Z_SALE_RPT")
+'loop thru the UDT
+F.Intrinsic.Control.For(V.Local.iR,0,1,1)
+	V.Local.sTemp.Set(V.Global.sUDT(v.Local.iR))
+	V.Local.iC.Set(0)
+	F.Intrinsic.Control.DoUntil(V.local.iC,>,v.uglobal.[v.local.sTemp].ubound)
+		F.Intrinsic.UI.ChangeWaitStatus("Writing Records...",V.Local.iPer,0,V.Local.itotalUDT)
+		F.ODBC.conx!rst.AddNew
+		F.ODBC.conx!rst.Set!RUN_ID(V.Global.iBIRunID)
+		F.ODBC.conx!rst.Set!Print_Date(V.Local.dDate.PervasiveDate)
+		F.ODBC.conx!rst.Set!Date_Invoice(V.uGlobal.[v.local.sTemp](v.Local.iC)!Date_Invoice)
+		F.ODBC.conx!rst.Set!Customer(V.uGlobal.[v.local.sTemp](v.Local.iC)!Customer)
+		F.ODBC.conx!rst.Set!Customer_Name(V.uGlobal.[v.local.sTemp](v.Local.iC)!Cust_Name)
+		F.ODBC.conx!rst.Set!Part(V.uGlobal.[v.local.sTemp](v.Local.iC)!Part)
+		F.ODBC.conx!rst.Set!Part_desc(V.uGlobal.[v.local.stemp](v.Local.iC)!Part_Desc)
+		F.ODBC.conx!rst.Set!UM_Inventory(V.uGlobal.[v.local.sTemp](v.Local.iC)!UM)
+		F.Intrinsic.Control.If(V.Local.iR,=,0)
+			F.ODBC.conx!rst.Set!Current_YTD_Qty(V.uGlobal.[v.local.stemp](v.Local.iC)!Qty_Shipped)
+			F.ODBC.conx!rst.Set!Current_YTD_Dollars(V.uGlobal.[v.local.sTemp](v.Local.iC)!Dollars)
+			F.ODBC.conx!rst.Set!CUrrent_YTD_Profit(V.uGlobal.[v.local.sTemp](v.Local.iC)!Profit)
+			F.ODBC.conx!rst.Set!Current_YTD_GP(V.uGlobal.[v.local.sTemp](v.Local.iC)!GP%)
+			F.ODBC.conx!rst.Set!PYTD_Qty(0)
+			F.ODBC.conx!rst.Set!PYTD_Dollars(0)
+			F.ODBC.conx!rst.Set!PYTD_Profit(0)
+			F.ODBC.conx!rst.Set!PYTD_GP(0)
+		F.Intrinsic.Control.Else
+			F.ODBC.conx!rst.Set!PYTD_Qty(V.uGlobal.[v.local.sTemp](v.Local.iC)!Qty_Shipped)
+			F.ODBC.conx!rst.Set!PYTD_Dollars(V.uGlobal.[v.local.sTemp](v.Local.iC)!Dollars)
+			F.ODBC.conx!rst.Set!PYTD_Profit(V.uGlobal.[v.local.sTemp](v.Local.iC)!Profit)
+			F.ODBC.conx!rst.Set!PYTD_GP(V.uGlobal.[v.local.sTemp](v.Local.iC)!GP%)
+			F.ODBC.conx!rst.Set!Current_YTD_Qty(0)
+			F.ODBC.conx!rst.Set!Current_YTD_Dollars(0)
+			F.ODBC.conx!rst.Set!CUrrent_YTD_Profit(0)
+			F.ODBC.conx!rst.Set!Current_YTD_GP(0)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst.Update
+		F.Intrinsic.Math.Add(V.Local.iC,1,V.Local.iC)
+		F.Intrinsic.Math.Add(V.Local.iPer,1,V.Local.iPer)
+	F.Intrinsic.Control.Loop
+F.Intrinsic.Control.If(V.uGlobal.uPrevYr!Customer,=,"")
+	F.Intrinsic.Control.ExitFor(V.Local.iR)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iR)
+F.ODBC.conx!rst.Close
+'stop logging
+Function.Global.BI.StopLogging(V.Global.iLogID)
+F.Intrinsic.Control.CallSub(Report)
+
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("UDT2Table_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.UDT2Table.End
+
+Program.Sub.Report.Start
+F.Intrinsic.Control.SetErrorHandler("Report_Err")
+F.Intrinsic.Control.ClearErrors
+
+'print the report after all is said and done
+V.Local.sError.Declare(String)
+V.local.sParam.Declare(String)
+V.Local.sParamVal.Declare(String)
+V.Local.iRptID.Declare(Long)
+V.Local.sRptName.Declare(String)
+V.Local.sDateRange.Declare(String)
+V.Local.iRet.Declare(Long)
+
+F.Intrinsic.String.Build("{0} - {1}",V.Screen.SS_Sales_RPT!dtpStart.Value,V.Screen.SS_Sales_RPT!dtpEnd.Value,V.Local.sDateRange)
+V.Local.sParam.Set("StartDate*!*EndDate")
+F.Intrinsic.String.Build("{0}*!*{1}",V.Screen.SS_Sales_RPT!dtpStart.Value,V.Screen.SS_Sales_RPT!dtpEnd.Value,V.Local.sParamVal)
+
+
+
+F.Intrinsic.Control.If(V.Local.iRptID,=,-1)
+	F.Intrinsic.UI.Msgbox("GCG_3917_Sales_Analysis_Cert.rpt not found")
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.CloseWaitDialog
+Function.Global.BI.RunReportPreProcessor(V.Global.iBIRunID,V.Global.iLogID,V.Local.sParam,V.Local.sParamVal,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Report_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Report.End
+
+program.sub.chkallparts_click.start
+F.Intrinsic.Control.SetErrorHandler("chkallparts_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'disable list view box and the add button
+F.Intrinsic.Control.If(V.Screen.SS_Sales_RPT!chkAllParts.Value,=,1)
+	Gui.SS_Sales_RPT.lvwPart.Enabled(False)
+	Gui.SS_Sales_RPT.cmdAddPart.Enabled(False)
+	F.Intrinsic.Control.CallSub(Cmdclearpart_click)
+F.Intrinsic.Control.Else
+	Gui.SS_Sales_RPT.lvwPart.Enabled(True)
+	Gui.SS_Sales_RPT.cmdAddPart.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkallparts_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkallparts_click.end
+
+program.sub.chkallcust_click.start
+F.Intrinsic.Control.SetErrorHandler("chkallcust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'if they check the all customers checkbox disable the list view and add button
+F.Intrinsic.Control.If(V.Screen.SS_Sales_RPT!chkAllCust.Value,=,1)
+	Gui.SS_Sales_RPT.cmdAddCust.Enabled(False)
+	Gui.SS_Sales_RPT.lvwCustomers.Enabled(False)
+	F.Intrinsic.Control.CallSub(Cmdclearcust_click)
+F.Intrinsic.Control.Else
+	Gui.SS_Sales_RPT.cmdAddCust.Enabled(True)
+	Gui.SS_Sales_RPT.lvwCustomers.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkallcust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkallcust_click.end
+
+program.sub.cmdpartremove_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdpartremove_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'this will remove the selected item from the lvw part
+Gui.SS_Sales_RPT.lvwPart.RemoveItem(V.Global.sKey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdpartremove_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdpartremove_click.end
+
+program.sub.cmdcustremove_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcustremove_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'this will remove the selected item from the lvw customer
+Gui.SS_Sales_RPT.lvwCustomers.RemoveItem(V.Global.sKey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcustremove_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcustremove_click.end
+
+Program.Sub.ProcessData.Start
+F.Intrinsic.Control.SetErrorHandler("ProcessData_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'here we are going to go through the UDT's and loop through them and calculate the processing of each.
+
+V.Local.iProfit.Declare(Float)
+V.Local.iDollars.Declare(Float)
+V.Local.iGP.Declare(Float)
+V.Local.iCost.Declare(Float)
+V.Local.iLoop.Declare(Long)
+V.Local.iR.Declare(Long)
+V.Local.iUdt.Declare(Long,0)
+V.Local.sTemp.Declare(String)
+
+
+'need to loop through both udt's twice.
+'so based on the loop we are on, lets set which udt to go through
+F.Intrinsic.Control.For(V.Local.iR,0,1,1)
+	V.Local.sTemp.Set(V.Global.sUDT(v.Local.iR))
+	V.Local.iUdt.Set(0)
+	F.Intrinsic.Control.DoUntil(V.Local.iUdt,>,v.uGlobal.[v.local.stemp].ubound)
+		'ytd dollars, qty shipped times price discount
+		F.Intrinsic.Math.Mult(v.uglobal.[v.local.sTemp](v.Local.iUdt)!Qty_Shipped,V.uGlobal.[v.local.sTemp](v.Local.iUdt)!Price_Discount,V.Local.iDollars)
+		V.uGlobal.[v.local.sTemp](v.local.iUDT)!Dollars.Set(V.Local.iDollars)
+		'profit dollars ytd, cost
+		F.Intrinsic.Math.Mult(V.uGlobal.[v.local.sTemp](v.Local.iUdt)!Qty_Shipped,V.uGlobal.[v.local.sTemp](v.local.iUdt)!Cost,V.Local.iCost)
+		'profit now
+		F.Intrinsic.Math.Sub(V.Local.iDollars,V.Local.iCost,V.Local.iProfit)
+		V.uGlobal.[v.local.sTemp](v.Local.iUdt)!Profit.Set(v.Local.iProfit)
+		'GP % , Revenue minus cost over revenue
+		F.Intrinsic.Math.Sub(V.Local.iDollars,V.Local.iCost,V.Local.iProfit)
+
+		F.Intrinsic.Control.If(V.Local.iDollars,>,0)
+			F.Intrinsic.Math.Div(V.Local.iProfit,V.Local.iDollars,V.Local.iGP)
+			'times is by 100 to represent a %
+			F.Intrinsic.Math.Mult(V.Local.iGP,100,V.Local.iGP)
+		F.Intrinsic.Control.Else
+			V.Local.iGP.Set(0.00)
+		F.Intrinsic.Control.EndIf
+
+		V.uGlobal.[v.local.sTemp](v.Local.iUdt)!GP%.Set(v.Local.iGP)
+	F.Intrinsic.Math.Add(V.Local.iUdt,1,V.local.iudt)
+	F.Intrinsic.Control.Loop
+F.Intrinsic.Control.Next(V.Local.iR)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ProcessData_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3917_Sales_Analysis_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_sales_rpt_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.ProcessData.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_Sales_Analysis_RPT$}$SUPERVSR$}$2/1/2013
+Program.Sub.Comments.End
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Sales Analysis Report
+SS_Form1.CTRL{{NAME::dtpStart\\TYPE::6\\CAPTION::Beginning Date\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::dtpEnd\\TYPE::6\\CAPTION::Ending Date\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtPartStart\\TYPE::2\\CAPTION::Part\\GROUP::2\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtPartEnd\\TYPE::2\\GROUP::2\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::chkAllParts\\TYPE::9\\CAPTION::All Parts\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdAddPart\\TYPE::5\\CAPTION::Add\\GROUP::3\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdClearPart\\TYPE::5\\CAPTION::Clear\\GROUP::3\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::lvwPart\\TYPE::7\\CAPTION::Part Range\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtCustStart\\TYPE::2\\CAPTION::Customer\\GROUP::4\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtCustEnd\\TYPE::2\\GROUP::4\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::chkAllCust\\TYPE::9\\CAPTION::All Customers\\GROUP::4\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdAddCust\\TYPE::5\\CAPTION::Add\\GROUP::5\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdClearCust\\TYPE::5\\CAPTION::Clear\\GROUP::5\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::lvwCustomers\\TYPE::7\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdPrint\\TYPE::5\\CAPTION::Print\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
+
